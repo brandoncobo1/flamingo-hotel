@@ -1,0 +1,19 @@
+{
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about",          "destination": "/about.html" },
+    { "source": "/story",          "destination": "/story.html" },
+    { "source": "/reviews",        "destination": "/reviews.html" },
+    { "source": "/location",       "destination": "/location.html" },
+    { "source": "/faq",            "destination": "/faq.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/booking",        "destination": "/booking.html" },
+    { "source": "/admin",          "destination": "/admin.html" },
+    { "source": "/junior-room",    "destination": "/junior-room.html" },
+    { "source": "/premium-triple", "destination": "/premium-triple.html" },
+    { "source": "/deluxe-triple",  "destination": "/deluxe-triple.html" },
+    { "source": "/chic-suite",     "destination": "/chic-suite.html" }
+  ]
+}

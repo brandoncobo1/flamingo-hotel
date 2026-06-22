@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Reviews | Flamingo Hotel Vlorë</title>
+  <meta name="description" content="Read authentic guest reviews of Flamingo Hotel in Vlorë, Albania. 4-star boutique hotel with spa, restaurant and sea views.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chic-shared.css">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Hotel",
+    "name":"Flamingo Hotel",
+    "address":{"@type":"PostalAddress","streetAddress":"Rruga Reshat Osmani, 9400","addressLocality":"Vlorë","addressCountry":"AL"},
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"6","bestRating":"5"},
+    "review":[
+      {"@type":"Review","author":{"@type":"Person","name":"Sophie M."},"reviewRating":{"@type":"Rating","ratingValue":"5"},"datePublished":"2024-09","reviewBody":"Absolutely stunning hotel. The spa and sea-view suite were both beyond expectation."},
+      {"@type":"Review","author":{"@type":"Person","name":"Marco R."},"reviewRating":{"@type":"Rating","ratingValue":"5"},"datePublished":"2024-08","reviewBody":"Hotel bellissimo, personale accogliente, colazione eccellente. Torneremo sicuramente."},
+      {"@type":"Review","author":{"@type":"Person","name":"James & Lena"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"datePublished":"2024-07","reviewBody":"One of the finest boutique hotels we've stayed in across all of Europe. Vlorë is a revelation."}
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── RATING BAR ── */
+    .rating-bar {
+      background:var(--dark2); padding:48px 40px;
+      display:flex; align-items:center; gap:60px; flex-wrap:wrap;
+    }
+    @media(max-width:768px){ .rating-bar{ padding:32px 20px; gap:24px; flex-direction:column; align-items:flex-start; } }
+    .rating-score {
+      font-family:var(--font-e); font-size:96px; font-style:italic;
+      color:var(--gold2); line-height:1; letter-spacing:-2px;
+    }
+    .rating-meta { color:rgba(255,255,255,0.5); }
+    .rating-stars { font-size:20px; color:var(--gold); letter-spacing:3px; margin-bottom:6px; }
+    .rating-label { font-size:11px; letter-spacing:0.12em; text-transform:uppercase; }
+    .rating-divider { width:1px; height:72px; background:rgba(255,255,255,0.1); }
+    @media(max-width:768px){ .rating-divider{ display:none; } }
+    .rating-stats { display:flex; gap:48px; flex-wrap:wrap; }
+    .rating-stat-num { font-family:var(--font-e); font-size:36px; font-style:italic; color:var(--gold2); display:block; }
+    .rating-stat-label { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); }
+
+    /* ── REVIEWS GRID ── */
+    .reviews-section { padding:80px 0 100px; background:var(--bg); }
+    .reviews-grid {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:3px;
+    }
+    @media(max-width:768px){ .reviews-grid{ grid-template-columns:1fr; } }
+    .review-card {
+      background:var(--white); padding:48px 44px; display:flex; flex-direction:column; gap:22px;
+    }
+    @media(max-width:768px){ .review-card{ padding:36px 24px; } }
+    .review-top { display:flex; justify-content:space-between; align-items:flex-start; }
+    .review-author { font-family:var(--font-d); font-size:20px; font-style:italic; }
+    .review-meta { font-size:11px; color:var(--muted); margin-top:4px; letter-spacing:0.06em; }
+    .review-stars { color:var(--gold); font-size:13px; letter-spacing:2px; }
+    .review-room {
+      display:inline-block; font-size:9px; letter-spacing:0.18em; text-transform:uppercase;
+      border:1px solid var(--border); padding:6px 14px; color:var(--muted); align-self:flex-start;
+    }
+    .review-text {
+      font-family:var(--font-e); font-size:17px; font-style:italic;
+      color:#555; line-height:1.75;
+    }
+    .review-date { font-size:11px; color:var(--muted); letter-spacing:0.08em; margin-top:auto; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo-wrap">
+    <img src="images/logo.jpg" alt="Flamingo Hotel" class="nav-logo-img">
+  </div>
+  <div class="nav-center">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#rooms" class="nav-link">Rooms</a>
+    <a href="index.html#gallery" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#contact" class="nav-link">Contact</a>
+    <a href="booking.html" class="nav-cta-btn">Reserve Now</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn active" onclick="setLang('en')">ENG</button>
+      <span class="lang-div">|</span>
+      <button class="lang-btn" onclick="setLang('sq')">ALB</button>
+      <span class="lang-div">|</span>
+      <button class="lang-btn" onclick="setLang('it')">ITA</button>
+    </div>
+    <span class="nav-phone">+355 33 200 500</span>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="deluxe-double.html">Rooms</a>
+  <a href="location.html">Location</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="booking.html">Reserve →</a>
+</div>
+
+<!-- HERO -->
+<header class="page-hero" style="min-height:52vh">
+  <div class="page-hero-bg" style="background-image:url('https://hotelcentral-vlore.al/wp-content/uploads/2026/05/864234155.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content reveal">
+    <span class="section-label">Guest Reviews</span>
+    <h1>Words from<br>those who stayed.</h1>
+    <div class="hero-gold-line"></div>
+  </div>
+</header>
+
+<!-- RATING BAR -->
+<div class="rating-bar">
+  <div class="rating-score">5.0</div>
+  <div class="rating-meta">
+    <div class="rating-stars">★★★★★</div>
+    <div class="rating-label">Based on verified guest reviews</div>
+  </div>
+  <div class="rating-divider"></div>
+  <div class="rating-stats">
+    <div><span class="rating-stat-num">100%</span><span class="rating-stat-label">Would return</span></div>
+    <div><span class="rating-stat-num">4★</span><span class="rating-stat-label">Boutique hotel</span></div>
+    <div><span class="rating-stat-num">Spa</span><span class="rating-stat-label">On-site wellness</span></div>
+    <div><span class="rating-stat-num">500m</span><span class="rating-stat-label">To the beach</span></div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-grid">
+
+      <article class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <div class="review-author">🇫🇷 Sophie M.</div>
+            <div class="review-meta">France · September 2024</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-room">Book a Room — Sea View</span>
+        <p class="review-text">"We spent four nights in the Book a Room and could not fault a single thing. The sea view from the room at sunrise is one of those moments you carry home with you. Staff were warm and genuinely attentive — not just polite. Breakfast was excellent. We will absolutely return."</p>
+        <div class="review-date">September 2024</div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <div class="review-author">🇮🇹 Marco &amp; Giulia R.</div>
+            <div class="review-meta">Italy · August 2024</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-room">Deluxe Triple with Balcony</span>
+        <p class="review-text">"Hotel bellissimo, design curato in ogni dettaglio. Il personale è stato eccezionale — ospitali come solo gli albanesi sanno essere. La colazione a buffet era ricca e fresca. La sauna è un tocco di lusso davvero apprezzato. Torneremo sicuramente l'anno prossimo."</p>
+        <div class="review-date">August 2024</div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <div class="review-author">🇬🇧 James &amp; Lena K.</div>
+            <div class="review-meta">United Kingdom · July 2024</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-room">Premium Triple with Balcony</span>
+        <p class="review-text">"One of the finest boutique hotels we've stayed in across all of Europe — and we travel extensively. Vlorë itself is a complete revelation. The hotel sits perfectly between city life and the beach. The balcony room was spacious and beautifully designed. Highly recommended without hesitation."</p>
+        <div class="review-date">July 2024</div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <div class="review-author">🇩🇪 Anika B.</div>
+            <div class="review-meta">Germany · June 2024</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-room">Junior Room</span>
+        <p class="review-text">"Phenomenal value for the quality on offer. The Junior Room was immaculate, quiet, and had everything we needed. The restaurant terrace in the evening was a real highlight — fresh food, attentive service. Albania has surprised us completely and this hotel set the tone for the whole trip."</p>
+        <div class="review-date">June 2024</div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <div class="review-author">ðŸ‡¬ðŸ‡· Elena P.</div>
+            <div class="review-meta">Greece · October 2024</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-room">Deluxe Triple with Balcony</span>
+        <p class="review-text">"Peaceful, stylish, and very well priced compared to similar hotels in Mykonos or Corfu. The spa and sauna were a lovely touch after days of sightseeing. Location is perfect — we walked to the beach every morning and the city centre every evening. Staff remembered our names by day two."</p>
+        <div class="review-date">October 2024</div>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <div class="review-author">ðŸ‡ºðŸ‡¸ David R.</div>
+            <div class="review-meta">United States · August 2024</div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-room">Book a Room — Sea View</span>
+        <p class="review-text">"I was completely surprised by Albania — I should not have been. Flamingo Hotel is a genuinely world-class property at a price point that no longer exists in Western Europe. The suite with sea view is worth every cent. I've already recommended this hotel to a dozen friends. Don't sleep on Vlorë."</p>
+        <div class="review-date">August 2024</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="container">
+    <span class="section-label">Reservations</span>
+    <h2>Your stay awaits.</h2>
+    <p class="cta-strip-sub">Flamingo Hotel — Vlorë, Albania</p>
+    <div class="cta-strip-btns">
+      <a href="booking.html" class="btn-outline-white">Reserve a Room →</a>
+      <a href="https://wa.me/35533200500?text=Hi%2C%20I'd%20like%20to%20book%20a%20room%20at%20Chic%20Boutique%20Hotel" class="btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">Flamingo Hotel</span>
+        <p>Rruga Reshat Osmani, 9400</p><p>Vlorë, Albania</p>
+        <p style="margin-top:8px"><a href="tel:+35533200500">+355 33 200 500</a></p>
+        <p><a href="mailto:info@hotelcentral-vlore.al">info@hotelcentral-vlore.al</a></p>
+      </div>
+      <div>
+        <span class="footer-col-title">Navigate</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="deluxe-double.html">Rooms</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Accommodation</span>
+        <ul>
+          <li><a href="deluxe-double.html">Deluxe Double Room</a></li>
+          <li><a href="deluxe-triple-room.html">Deluxe Triple Room</a></li>
+          <li><a href="economy-twin.html">Deluxe Triple</a></li>
+          <li><a href="booking.html">Book a Room</a></li>
+          <li><a href="booking.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Follow Us</span>
+        <ul>
+          <li><a href="https://www.instagram.com/hotelcentral/" target="_blank" rel="noopener">Instagram — @hotelcentral</a></li>
+          <li><a href="https://www.facebook.com/hotelcentral" target="_blank" rel="noopener">Facebook</a></li>
+          <li style="margin-top:16px"><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Flamingo Hotel. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+
+<script>
+const T={
+en:{heroLabel:'Guest Reviews',ctaLabel:'Reservations',heroH1:'Words from<br>those who stayed.',reserveBtn:'Reserve a Room →',mmHome:'Home',mmAbout:'About',mmRooms:'Rooms',mmLocation:'Location',mmReviews:'Reviews',mmReserve:'Reserve →',footerNav:'Navigate',footerAccom:'Accommodation',footerFollow:'Follow Us',fHome:'Home',fAbout:'About Us',fRooms:'Rooms',fReviews:'Reviews',fFaq:'FAQ',acJunior:'Junior Room',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Reserve',privacyPolicy:'Privacy Policy'},
+sq:{heroLabel:'Vlerësimet e Mysafirëve',ctaLabel:'Rezervimet',heroH1:'Fjalë nga<br>ata që qëndruan.',reserveBtn:'Rezervo një Dhomë →',mmHome:'Kryefaqja',mmAbout:'Rreth',mmRooms:'Dhomat',mmLocation:'Vendndodhja',mmReviews:'Vlerësimet',mmReserve:'Rezervo →',footerNav:'Navigoni',footerAccom:'Akomodim',footerFollow:'Na Ndiqni',fHome:'Kryefaqja',fAbout:'Rreth Nesh',fRooms:'Dhomat',fReviews:'Vlerësimet',fFaq:'FAQ',acJunior:'Dhoma Junior',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Rezervo',privacyPolicy:'Politika e Privatësisë'},
+it:{heroLabel:'Recensioni degli Ospiti',ctaLabel:'Prenotazioni',heroH1:'Le parole di<br>chi è stato con noi.',reserveBtn:'Prenota una Camera →',mmHome:'Home',mmAbout:'Chi Siamo',mmRooms:'Camere',mmLocation:'Posizione',mmReviews:'Recensioni',mmReserve:'Prenota →',footerNav:'Naviga',footerAccom:'Alloggio',footerFollow:'Seguici',fHome:'Home',fAbout:'Chi Siamo',fRooms:'Camere',fReviews:'Recensioni',fFaq:'FAQ',acJunior:'Junior Room',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Prenota',privacyPolicy:'Informativa Privacy'}
+};
+let lang=localStorage.getItem('lang')||'en';
+function applyTranslations(){
+  const t=T[lang];if(!t)return;
+  const q=s=>document.querySelector(s);
+  const qa=s=>[...document.querySelectorAll(s)];
+  const sls=qa('.section-label');
+  if(sls[0])sls[0].textContent=t.heroLabel;if(sls[1])sls[1].textContent=t.ctaLabel;
+  const h1=q('.page-hero-content h1');if(h1)h1.innerHTML=t.heroH1;
+  const ctaBtns=qa('.cta-strip-btns a');if(ctaBtns[0])ctaBtns[0].textContent=t.reserveBtn;
+  const mm=s=>q('.mobile-menu a[href="'+s+'"]');
+  if(mm('index.html'))mm('index.html').textContent=t.mmHome;if(mm('about.html'))mm('about.html').textContent=t.mmAbout;if(mm('deluxe-double.html'))mm('deluxe-double.html').textContent=t.mmRooms;if(mm('location.html'))mm('location.html').textContent=t.mmLocation;if(mm('reviews.html'))mm('reviews.html').textContent=t.mmReviews;if(mm('booking.html'))mm('booking.html').textContent=t.mmReserve;
+  const fcts=qa('.footer-col-title');if(fcts[0])fcts[0].textContent=t.footerNav;if(fcts[1])fcts[1].textContent=t.footerAccom;if(fcts[2])fcts[2].textContent=t.footerFollow;
+  const fc=qa('.footer-grid > div');
+  if(fc[1]){const lks=[...fc[1].querySelectorAll('a')];if(lks[0])lks[0].textContent=t.fHome;if(lks[1])lks[1].textContent=t.fAbout;if(lks[2])lks[2].textContent=t.fRooms;if(lks[3])lks[3].textContent=t.fReviews;if(lks[4])lks[4].textContent=t.fFaq;}
+  if(fc[2]){const lks=[...fc[2].querySelectorAll('a')];if(lks[0])lks[0].textContent=t.acJunior;if(lks[1])lks[1].textContent=t.acPremium;if(lks[2])lks[2].textContent=t.acDeluxe;if(lks[3])lks[3].textContent=t.acSuite;if(lks[4])lks[4].textContent=t.acReserve;}
+  if(fc[3]){const lks=[...fc[3].querySelectorAll('a')];if(lks[2])lks[2].textContent=t.privacyPolicy;}
+}
+function setLang(l){lang=l;localStorage.setItem('lang',l);document.querySelectorAll('.lang-btn').forEach(b=>{const m={en:'ENG',sq:'ALB',it:'ITA'};b.classList.toggle('active',b.textContent.trim()===m[l]);});applyTranslations();}
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>80),{passive:true});
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.addEventListener('DOMContentLoaded',()=>setLang(lang));
+</script>
+</body>
+</html>
+

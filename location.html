@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location | Flamingo Hotel · Vlorë, Albania</title>
+  <meta name="description" content="Flamingo Hotel is located on Rruga Reshat Osmani, 9400 in Vlorë, Albania — 500 metres from Vlorë Beach, 5 minutes walk to the city centre. Near the Albanian Riviera.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chic-shared.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Hotel","name":"Flamingo Hotel","telephone":"+35533200500","address":{"@type":"PostalAddress","streetAddress":"Rruga Reshat Osmani, 9400","addressLocality":"Vlorë","postalCode":"9401","addressCountry":"AL"},"geo":{"@type":"GeoCoordinates","latitude":40.4549,"longitude":19.4902},"hasMap":"https://maps.google.com/?q=40.4549,19.4902"}
+  </script>
+  <style>
+    .map-wrap { width:100%; height:520px; position:relative; }
+    .map-wrap iframe { width:100%; height:100%; border:0; filter:grayscale(0.3) contrast(1.05); }
+    @media(max-width:768px){ .map-wrap{ height:360px; } }
+
+    .distances { background:var(--white); padding:100px 0; }
+    .dist-layout { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+    @media(max-width:768px){ .dist-layout{ grid-template-columns:1fr; gap:40px; } }
+    .dist-intro h2 { font-family:var(--font-d); font-size:clamp(34px,4.5vw,56px); font-style:italic; font-weight:400; margin-bottom:24px; line-height:1.15; }
+    .dist-intro p { font-size:14px; color:var(--muted); line-height:1.9; margin-bottom:18px; }
+    .dist-list { }
+    .dist-item { display:flex; justify-content:space-between; align-items:center; padding:18px 0; border-bottom:1px solid var(--border); font-size:13px; }
+    .dist-item:first-child { border-top:1px solid var(--border); }
+    .dist-name { display:flex; align-items:center; gap:12px; }
+    .dist-icon { color:var(--gold); }
+    .dist-val { font-family:var(--font-d); font-size:18px; font-style:italic; color:var(--gold); }
+
+    .nearby { background:var(--bg); padding:100px 0; }
+    .nearby-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:52px; }
+    @media(max-width:768px){ .nearby-grid{ grid-template-columns:1fr; } }
+    .nearby-card { background:var(--white); padding:44px 36px; }
+    .nearby-icon { font-size:28px; margin-bottom:18px; }
+    .nearby-card h3 { font-family:var(--font-d); font-size:22px; font-style:italic; margin-bottom:12px; }
+    .nearby-card p { font-size:13px; color:var(--muted); line-height:1.8; }
+
+    .arrive { background:var(--dark2); color:var(--white); padding:100px 0; }
+    .arrive .section-label { color:var(--gold2); }
+    .arrive-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-top:52px; }
+    @media(max-width:768px){ .arrive-grid{ grid-template-columns:1fr; } }
+    .arrive-card { padding:40px 32px; border-top:1px solid rgba(255,255,255,0.08); }
+    .arrive-card h3 { font-family:var(--font-d); font-size:22px; font-style:italic; color:var(--gold2); margin-bottom:14px; }
+    .arrive-card p { font-size:13px; color:rgba(255,255,255,0.45); line-height:1.85; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo-wrap">
+    <img src="images/logo.jpg" alt="Flamingo Hotel" class="nav-logo-img">
+  </div>
+  <div class="nav-center">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#rooms" class="nav-link">Rooms</a>
+    <a href="index.html#gallery" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#contact" class="nav-link">Contact</a>
+    <a href="booking.html" class="nav-cta-btn">Reserve Now</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn active" onclick="setLang('en')">ENG</button>
+      <span class="lang-div">|</span>
+      <button class="lang-btn" onclick="setLang('sq')">ALB</button>
+      <span class="lang-div">|</span>
+      <button class="lang-btn" onclick="setLang('it')">ITA</button>
+    </div>
+    <span class="nav-phone">+355 33 200 500</span>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="deluxe-double.html">Rooms</a>
+  <a href="location.html">Location</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="booking.html">Reserve →</a>
+</div>
+
+<!-- HERO -->
+<header class="page-hero" style="min-height:56vh">
+  <div class="page-hero-bg" style="background-image:url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/499405254.jpg?k=1d3c5b9ae32e748adda0cff0ad1af01f7bf01a3cea8de789e9522a586f0548ce&o=')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content reveal">
+    <span class="section-label">Location</span>
+    <h1>Steps from<br>the sea.</h1>
+    <div class="hero-gold-line"></div>
+  </div>
+</header>
+
+<!-- MAP -->
+<div class="map-wrap">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.3!2d19.4898!3d40.4547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134533d7c8d3f4b5%3A0x1234567890abcdef!2sHotel%20Central%20Vlore!5e0!3m2!1sen!2sal!4v1700000000001"
+    allowfullscreen loading="lazy" title="Flamingo Hotel Hotel location in Vlorë, Albania">
+  </iframe>
+</div>
+
+<!-- DISTANCES -->
+<section class="distances">
+  <div class="container">
+    <div class="dist-layout">
+      <div class="dist-intro reveal">
+        <span class="section-label">Walkability</span>
+        <h2>Everything within<br>walking distance.</h2>
+        <p>Rruga Reshat Osmani, 9400 sits at the heart of Vlorë — a deliberate address. The beach is a 6-minute walk. The main square is 8 minutes. The restaurant strip along the Lungomare is even closer.</p>
+        <p>No car needed. No transfers. Just step out and the city is yours.</p>
+        <div class="gold-rule" style="margin-top:32px"></div>
+        <p style="font-size:12px; letter-spacing:0.1em; color:var(--muted)">40°27′18″N · 19°29′25″E</p>
+      </div>
+      <div class="reveal">
+        <ul class="dist-list">
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 21c-4.97-5.22-8-9-8-12a8 8 0 1116 0c0 3-3.03 6.78-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Vlorë Beach (Plazhi i Vlorës)
+            </span>
+            <span class="dist-val">500 m</span>
+          </li>
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 21c-4.97-5.22-8-9-8-12a8 8 0 1116 0c0 3-3.03 6.78-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              City Centre & Restaurants
+            </span>
+            <span class="dist-val">5 min</span>
+          </li>
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 21c-4.97-5.22-8-9-8-12a8 8 0 1116 0c0 3-3.03 6.78-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Sheshi i Pavarësisë (Independence Sq.)
+            </span>
+            <span class="dist-val">8 min</span>
+          </li>
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m4 4H9m6 0l-3-3m3 3l-3 3"/></svg>
+              Uji i Ftohtë Beach (by car / taxi)
+            </span>
+            <span class="dist-val">12 min</span>
+          </li>
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              Tirana (TIA Airport)
+            </span>
+            <span class="dist-val">2h 30</span>
+          </li>
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              Corfu (ferry + transfer)
+            </span>
+            <span class="dist-val">1h 45</span>
+          </li>
+          <li class="dist-item">
+            <span class="dist-name">
+              <svg class="dist-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 21c-4.97-5.22-8-9-8-12a8 8 0 1116 0c0 3-3.03 6.78-8 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Vlorë Airport (under development)
+            </span>
+            <span class="dist-val">25 km</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEARBY -->
+<section class="nearby">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">What's Nearby</span>
+      <h2>Vlorë beyond the hotel.</h2>
+    </div>
+    <div class="nearby-grid">
+      <div class="nearby-card reveal">
+        <div class="nearby-icon">🏖️</div>
+        <h3>Beaches & Riviera</h3>
+        <p>Vlorë is the northern gateway to the Albanian Riviera. Uji i Ftohtë, Palasa, Drymades, Himara — some of the cleanest water in the Mediterranean — all reachable within an hour. Vlorë Beach itself is a 6-minute walk from reception.</p>
+      </div>
+      <div class="nearby-card reveal">
+        <div class="nearby-icon">🏛️</div>
+        <h3>History & Culture</h3>
+        <p>Albania declared independence in Vlorë in 1912. The Independence Museum, Muradi Mosque (1542), and the ruins of Apollonia — one of antiquity's most important Greek cities — are all within striking distance. History here is worn lightly but felt deeply.</p>
+      </div>
+      <div class="nearby-card reveal">
+        <div class="nearby-icon">🍷</div>
+        <h3>Food, Wine & City Life</h3>
+        <p>The Lungomare promenade is Vlorë at its most alive — restaurants, bars, and café terraces running along the seafront. Our team will point you to the places worth going: fresh seafood, local raki, and the informal warmth that defines Albanian evenings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ARRIVE -->
+<section class="arrive">
+  <div class="container">
+    <span class="section-label reveal">Getting Here</span>
+    <h2 class="reveal" style="font-family:var(--font-d);font-size:clamp(32px,4vw,50px);font-style:italic;font-weight:400;color:var(--white)">How to reach us.</h2>
+    <div class="arrive-grid">
+      <div class="arrive-card reveal">
+        <h3>By Car</h3>
+        <p>From Tirana: take the SH4 south via Fier (approx. 2h 30). From the Kakavia border (Greece): 1h 45 north via Gjirokastër. Free private parking is available on-site for all guests — no charge, no prior booking needed.</p>
+      </div>
+      <div class="arrive-card reveal">
+        <h3>By Bus / Furgon</h3>
+        <p>Direct connections from Tirana's Kombinat terminal run several times daily (approx. 3h). From Greece, cross at Kakavia and connect to Vlorë. We can arrange a complimentary taxi from the bus station — just let us know your arrival time.</p>
+      </div>
+      <div class="arrive-card reveal">
+        <h3>Via Corfu</h3>
+        <p>A favourite route from Western Europe: fly to Corfu (CFU), take the short ferry to Sarandë (35 min), then drive or transfer north to Vlorë (1h 30). Scenic, efficient, and a great start to an Albanian Riviera itinerary. Ask us about private transfers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="container">
+    <span class="section-label">Reservations</span>
+    <h2>Ready to arrive?</h2>
+    <p class="cta-strip-sub">Book direct for our best available rate — or reach us instantly on WhatsApp.</p>
+    <div class="cta-strip-btns">
+      <a href="booking.html" class="btn-outline-white">Reserve a Room →</a>
+      <a href="https://wa.me/35568666601?text=Hi%2C%20I'd%20like%20to%20ask%20about%20getting%20to%20Chic%20Boutique%20Hotel" class="btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Ask via WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">Flamingo Hotel</span>
+        <p>Rruga Reshat Osmani, 9400</p><p>Vlorë, Albania</p>
+        <p style="margin-top:8px"><a href="tel:+35533200500">+355 33 200 500</a></p>
+        <p><a href="mailto:info@hotelcentral-vlore.al">info@hotelcentral-vlore.al</a></p>
+      </div>
+      <div>
+        <span class="footer-col-title">Navigate</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="deluxe-double.html">Rooms</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Accommodation</span>
+        <ul>
+          <li><a href="deluxe-double.html">Deluxe Double Room</a></li>
+          <li><a href="deluxe-triple-room.html">Deluxe Triple Room</a></li>
+          <li><a href="deluxe-triple.html">Deluxe Triple</a></li>
+          <li><a href="booking.html">Book a Room</a></li>
+          <li><a href="booking.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Follow Us</span>
+        <ul>
+          <li><a href="https://www.instagram.com/hotelcentral/" target="_blank" rel="noopener">Instagram — @hotelcentral</a></li>
+          <li><a href="https://www.facebook.com/hotelcentral" target="_blank" rel="noopener">Facebook</a></li>
+          <li style="margin-top:16px"><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Flamingo Hotel. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+
+<script>
+const T={
+en:{heroLabel:'Location',walkLabel:'Walkability',arriveLabel:'Getting Here',ctaLabel:'Reservations',heroH1:'Steps from<br>the sea.',reserveBtn:'Reserve a Room →',mmHome:'Home',mmAbout:'About',mmRooms:'Rooms',mmLocation:'Location',mmReviews:'Reviews',mmReserve:'Reserve →',footerNav:'Navigate',footerAccom:'Accommodation',footerFollow:'Follow Us',fHome:'Home',fAbout:'About Us',fRooms:'Rooms',fReviews:'Reviews',fFaq:'FAQ',acJunior:'Junior Room',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Reserve',privacyPolicy:'Privacy Policy'},
+sq:{heroLabel:'Vendndodhja',walkLabel:'Pozita',arriveLabel:'Si të Arrini',ctaLabel:'Rezervimet',heroH1:'Hapa<br>nga deti.',reserveBtn:'Rezervo një Dhomë →',mmHome:'Kryefaqja',mmAbout:'Rreth',mmRooms:'Dhomat',mmLocation:'Vendndodhja',mmReviews:'Vlerësimet',mmReserve:'Rezervo →',footerNav:'Navigoni',footerAccom:'Akomodim',footerFollow:'Na Ndiqni',fHome:'Kryefaqja',fAbout:'Rreth Nesh',fRooms:'Dhomat',fReviews:'Vlerësimet',fFaq:'FAQ',acJunior:'Dhoma Junior',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Rezervo',privacyPolicy:'Politika e Privatësisë'},
+it:{heroLabel:'Posizione',walkLabel:'A Piedi',arriveLabel:'Come Arrivare',ctaLabel:'Prenotazioni',heroH1:'A passi<br>dal mare.',reserveBtn:'Prenota una Camera →',mmHome:'Home',mmAbout:'Chi Siamo',mmRooms:'Camere',mmLocation:'Posizione',mmReviews:'Recensioni',mmReserve:'Prenota →',footerNav:'Naviga',footerAccom:'Alloggio',footerFollow:'Seguici',fHome:'Home',fAbout:'Chi Siamo',fRooms:'Camere',fReviews:'Recensioni',fFaq:'FAQ',acJunior:'Junior Room',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Prenota',privacyPolicy:'Informativa Privacy'}
+};
+let lang=localStorage.getItem('lang')||'en';
+function applyTranslations(){
+  const t=T[lang];if(!t)return;
+  const q=s=>document.querySelector(s);
+  const qa=s=>[...document.querySelectorAll(s)];
+  const sls=qa('.section-label');
+  if(sls[0])sls[0].textContent=t.heroLabel;if(sls[1])sls[1].textContent=t.walkLabel;if(sls[2])sls[2].textContent=t.arriveLabel;if(sls[3])sls[3].textContent=t.ctaLabel;
+  const h1=q('.page-hero-content h1');if(h1)h1.innerHTML=t.heroH1;
+  const ctaBtns=qa('.cta-strip-btns a');if(ctaBtns[0])ctaBtns[0].textContent=t.reserveBtn;
+  const mm=s=>q('.mobile-menu a[href="'+s+'"]');
+  if(mm('index.html'))mm('index.html').textContent=t.mmHome;if(mm('about.html'))mm('about.html').textContent=t.mmAbout;if(mm('deluxe-double.html'))mm('deluxe-double.html').textContent=t.mmRooms;if(mm('location.html'))mm('location.html').textContent=t.mmLocation;if(mm('reviews.html'))mm('reviews.html').textContent=t.mmReviews;if(mm('booking.html'))mm('booking.html').textContent=t.mmReserve;
+  const fcts=qa('.footer-col-title');if(fcts[0])fcts[0].textContent=t.footerNav;if(fcts[1])fcts[1].textContent=t.footerAccom;if(fcts[2])fcts[2].textContent=t.footerFollow;
+  const fc=qa('.footer-grid > div');
+  if(fc[1]){const lks=[...fc[1].querySelectorAll('a')];if(lks[0])lks[0].textContent=t.fHome;if(lks[1])lks[1].textContent=t.fAbout;if(lks[2])lks[2].textContent=t.fRooms;if(lks[3])lks[3].textContent=t.fReviews;if(lks[4])lks[4].textContent=t.fFaq;}
+  if(fc[2]){const lks=[...fc[2].querySelectorAll('a')];if(lks[0])lks[0].textContent=t.acJunior;if(lks[1])lks[1].textContent=t.acPremium;if(lks[2])lks[2].textContent=t.acDeluxe;if(lks[3])lks[3].textContent=t.acSuite;if(lks[4])lks[4].textContent=t.acReserve;}
+  if(fc[3]){const lks=[...fc[3].querySelectorAll('a')];if(lks[2])lks[2].textContent=t.privacyPolicy;}
+}
+function setLang(l){lang=l;localStorage.setItem('lang',l);document.querySelectorAll('.lang-btn').forEach(b=>{const m={en:'ENG',sq:'ALB',it:'ITA'};b.classList.toggle('active',b.textContent.trim()===m[l]);});applyTranslations();}
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>80),{passive:true});
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.addEventListener('DOMContentLoaded',()=>setLang(lang));
+</script>
+</body>
+</html>
+

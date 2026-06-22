@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Flamingo Hotel Vlorë</title>
+  <meta name="description" content="Frequently asked questions about Flamingo Hotel in Vlorë, Albania — booking, cancellation, spa, check-in, parking, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chic-shared.css">
+  <script type="application/ld+json" id="faq-schema"></script>
+  <style>
+    .faq-hero { background:var(--dark); color:var(--white); padding:180px 40px 80px; }
+    @media(max-width:768px){ .faq-hero{ padding:140px 20px 60px; } }
+    .faq-hero .section-label { color:var(--gold2); }
+    .faq-hero h1 { font-family:var(--font-d); font-size:clamp(48px,7vw,88px); font-style:italic; font-weight:400; color:var(--white); line-height:1.0; margin-bottom:20px; }
+    .faq-hero .lead { font-size:14px; color:rgba(255,255,255,0.45); max-width:480px; line-height:1.8; }
+
+    .faq-section { padding:100px 0; background:var(--bg); }
+    .faq-layout { display:grid; grid-template-columns:280px 1fr; gap:80px; align-items:start; }
+    @media(max-width:900px){ .faq-layout{ grid-template-columns:1fr; gap:40px; } }
+
+    .faq-sidebar { position:sticky; top:100px; }
+    @media(max-width:900px){ .faq-sidebar{ position:static; } }
+    .faq-sidebar h3 { font-family:var(--font-d); font-size:22px; font-style:italic; margin-bottom:14px; }
+    .faq-sidebar p { font-size:13px; color:var(--muted); line-height:1.75; margin-bottom:22px; }
+    .faq-sidebar-links { display:flex; flex-direction:column; gap:10px; margin-top:32px; }
+    .faq-sidebar-links a { font-size:12px; color:var(--gold); letter-spacing:0.06em; }
+    .faq-sidebar-links a:hover { opacity:0.7; }
+
+    /* ACCORDION */
+    .accordion { }
+    .acc-item { border-bottom:1px solid var(--border); background:var(--white); }
+    .acc-item:first-child { border-top:1px solid var(--border); }
+    .acc-trigger {
+      width:100%; background:none; border:none; padding:26px 32px;
+      display:flex; justify-content:space-between; align-items:center;
+      cursor:pointer; text-align:left; gap:16px;
+    }
+    .acc-trigger:hover .acc-q { color:var(--gold); }
+    .acc-q { font-family:var(--font-d); font-size:19px; font-style:italic; font-weight:400; transition:color 0.3s; line-height:1.25; }
+    .acc-icon {
+      width:30px; height:30px; border:1px solid var(--border); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      font-size:18px; color:var(--muted); transition:transform 0.3s, border-color 0.3s, color 0.3s;
+    }
+    .acc-item.open .acc-icon { transform:rotate(45deg); border-color:var(--gold); color:var(--gold); }
+    .acc-body { max-height:0; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .acc-item.open .acc-body { max-height:500px; }
+    .acc-body-inner { padding:0 32px 28px; font-size:14px; color:var(--muted); line-height:1.85; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo-wrap">
+    <img src="images/logo.jpg" alt="Flamingo Hotel" class="nav-logo-img">
+  </div>
+  <div class="nav-center">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#rooms" class="nav-link">Rooms</a>
+    <a href="index.html#gallery" class="nav-link">Gallery</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="index.html#contact" class="nav-link">Contact</a>
+    <a href="booking.html" class="nav-cta-btn">Reserve Now</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn active" onclick="setLang('en')">ENG</button>
+      <span class="lang-div">|</span>
+      <button class="lang-btn" onclick="setLang('sq')">ALB</button>
+      <span class="lang-div">|</span>
+      <button class="lang-btn" onclick="setLang('it')">ITA</button>
+    </div>
+    <span class="nav-phone">+355 33 200 500</span>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="deluxe-double.html">Rooms</a>
+  <a href="location.html">Location</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="booking.html">Reserve →</a>
+</div>
+
+<header class="faq-hero">
+  <span class="section-label">FAQ</span>
+  <h1>Questions<br>&amp; Answers.</h1>
+  <p class="lead">Everything you need before you arrive. Can't find your answer? We're on WhatsApp and typically reply within minutes.</p>
+</header>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-layout">
+      <aside class="faq-sidebar reveal">
+        <h3>Still have a question?</h3>
+        <p>Our team is available 24 hours on WhatsApp and by phone. We genuinely enjoy hearing from guests before they arrive.</p>
+        <a href="https://wa.me/35533200500?text=Hi%2C%20I%20have%20a%20question%20about%20Chic%20Boutique%20Hotel" class="btn-whatsapp" style="font-size:10px;padding:12px 20px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <div class="faq-sidebar-links">
+          <a href="booking.html">→ Make a reservation</a>
+          <a href="deluxe-double.html">→ View room options</a>
+          <a href="location.html">→ Getting here</a>
+          <a href="reviews.html">→ Guest reviews</a>
+        </div>
+      </aside>
+
+      <div class="accordion reveal" id="accordion"></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="container">
+    <span class="section-label">Reservations</span>
+    <h2>Ready to book?</h2>
+    <p class="cta-strip-sub">Direct bookings always receive our best available rate.</p>
+    <div class="cta-strip-btns">
+      <a href="booking.html" class="btn-outline-white">Reserve a Room →</a>
+      <a href="https://wa.me/35533200500" class="btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Ask on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><span class="footer-brand">Flamingo Hotel</span><p>Rruga Reshat Osmani, 9400</p><p>Vlorë, Albania</p><p style="margin-top:8px"><a href="tel:+35533200500">+355 33 200 500</a></p><p><a href="mailto:info@hotelcentral-vlore.al">info@hotelcentral-vlore.al</a></p></div>
+      <div><span class="footer-col-title">Navigate</span><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="deluxe-double.html">Rooms</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div><span class="footer-col-title">Accommodation</span><ul><li><a href="deluxe-double.html">Deluxe Double Room</a></li><li><a href="deluxe-triple-room.html">Deluxe Triple Room</a></li><li><a href="economy-twin.html">Deluxe Triple</a></li><li><a href="booking.html">Book a Room</a></li><li><a href="booking.html">Reserve</a></li></ul></div>
+      <div><span class="footer-col-title">Follow Us</span><ul><li><a href="https://www.instagram.com/hotelcentral/" target="_blank" rel="noopener">Instagram — @hotelcentral</a></li><li><a href="https://www.facebook.com/hotelcentral" target="_blank" rel="noopener">Facebook</a></li><li style="margin-top:16px"><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">© 2025 Flamingo Hotel. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+
+<script>
+const FAQS = [
+  { q:"What is included in the room rate?", a:"All rooms include access to free Wi-Fi, air conditioning, flat-screen TV, minibar, private bathroom with quality toiletries, and daily housekeeping. Breakfast (continental or buffet) is available and can be included depending on your selected rate. The Book a Room includes a welcome bottle of local wine." },
+  { q:"How do I make a reservation?", a:"You can book directly through our website booking form, call us at +355 33 200 500, or reach us instantly via WhatsApp. Direct bookings always receive our best available rate and full flexibility." },
+  { q:"What is the cancellation policy?", a:"Free cancellation is available up to 48 hours before check-in. Bookings cancelled within 48 hours of arrival are charged one night's rate. No-shows are charged in full. We always recommend contacting us directly if your plans change — we're flexible wherever we can be." },
+  { q:"What are the check-in and check-out times?", a:"Standard check-in is from 3:00 PM. Check-out is by 11:00 AM. Early check-in and late check-out can be arranged on request, subject to availability. Please contact us in advance and we will do our best to accommodate." },
+  { q:"Is the spa and sauna included for all guests?", a:"Yes. The spa and sauna are available to all hotel guests at no additional charge. Access can be arranged through the front desk. Dedicated wellness treatments and massage services are available at an additional cost — ask us for the current menu." },
+  { q:"How close are you to the beach?", a:"Vlorë Beach (Plazhi i Vlorës) is 500 metres from our front door — approximately a 6-minute walk. The Uji i Ftohtë beach, a longer and more secluded stretch south of the city, is accessible by taxi in around 12 minutes." },
+  { q:"Do you have free parking?", a:"Yes — free private parking is available on-site for all guests throughout their stay. No advance booking is required. The parking area is secure and monitored." },
+  { q:"Is breakfast included?", a:"Breakfast availability depends on your selected rate. We offer both continental and buffet breakfast options on our restaurant terrace. We recommend adding breakfast to your reservation — the terrace views in the morning are worth arriving on time for." },
+  { q:"Do you offer airport transfers?", a:"Yes. We can arrange private transfers from Tirana International Airport (TIA, approximately 2h 30 by road) and connections from the Corfu ferry route. Pricing varies by group size — please contact us via WhatsApp for a quote before your arrival." },
+  { q:"Is the hotel family-friendly?", a:"Absolutely. Several of our room types — including the Premium and Deluxe Triples — are designed with families in mind, offering multiple beds and balcony space. Cots and extra bedding are available on request at no charge." },
+  { q:"What languages does your staff speak?", a:"Our team speaks Albanian, English, and Italian fluently. We can also assist in several other languages — please don't hesitate to ask." },
+  { q:"Do you have a restaurant and bar?", a:"Yes. Our restaurant with outdoor terrace is open for breakfast and dinner, serving seasonal Albanian cuisine with fresh, locally sourced ingredients. Our bar operates through the evening and specialises in crafted cocktails and a curated wine selection." },
+  { q:"Is there room service?", a:"Yes — room service is available during restaurant hours. Please contact the front desk to place your order." },
+  { q:"Can I arrange a special occasion at the hotel?", a:"We love special occasions. Whether it's a romantic dinner on the terrace, a birthday arrangement, or a small private event, please contact us in advance via WhatsApp or email and our team will make the arrangements personally." },
+];
+
+// Build accordion
+const acc = document.getElementById('accordion');
+FAQS.forEach((faq, i) => {
+  const item = document.createElement('div');
+  item.className = 'acc-item';
+  item.innerHTML = `
+    <button class="acc-trigger" onclick="toggleAcc(${i})">
+      <span class="acc-q">${faq.q}</span>
+      <span class="acc-icon">+</span>
+    </button>
+    <div class="acc-body"><div class="acc-body-inner">${faq.a}</div></div>`;
+  acc.appendChild(item);
+});
+
+// FAQ schema
+document.getElementById('faq-schema').textContent = JSON.stringify({
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity": FAQS.map(f => ({"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}))
+});
+
+function toggleAcc(i) {
+  const items = document.querySelectorAll('.acc-item');
+  const isOpen = items[i].classList.contains('open');
+  items.forEach(el => el.classList.remove('open'));
+  if (!isOpen) items[i].classList.add('open');
+}
+
+const T={
+en:{heroLabel:'FAQ',ctaLabel:'Reservations',heroH1:'Questions<br>&amp; Answers.',sideH3:'Still have a question?',sideWa:'WhatsApp Us',sideL1:'→ Make a reservation',sideL2:'→ View room options',sideL3:'→ Getting here',sideL4:'→ Guest reviews',ctaReserve:'Reserve a Room →',ctaWa:'Ask on WhatsApp',mmHome:'Home',mmAbout:'About',mmRooms:'Rooms',mmLocation:'Location',mmReviews:'Reviews',mmReserve:'Reserve →',footerNav:'Navigate',footerAccom:'Accommodation',footerFollow:'Follow Us',fHome:'Home',fAbout:'About Us',fRooms:'Rooms',fReviews:'Reviews',fFaq:'FAQ',acJunior:'Junior Room',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Reserve',privacyPolicy:'Privacy Policy'},
+sq:{heroLabel:'FAQ',ctaLabel:'Rezervimet',heroH1:'Pyetje<br>&amp; Përgjigje.',sideH3:'Keni ende pyetje?',sideWa:'WhatsApp',sideL1:'→ Bëni një rezervim',sideL2:'→ Shikoni dhomat',sideL3:'→ Si të arrini',sideL4:'→ Vlerësimet e mysafirëve',ctaReserve:'Rezervo një Dhomë →',ctaWa:'Pyesni në WhatsApp',mmHome:'Kryefaqja',mmAbout:'Rreth',mmRooms:'Dhomat',mmLocation:'Vendndodhja',mmReviews:'Vlerësimet',mmReserve:'Rezervo →',footerNav:'Navigoni',footerAccom:'Akomodim',footerFollow:'Na Ndiqni',fHome:'Kryefaqja',fAbout:'Rreth Nesh',fRooms:'Dhomat',fReviews:'Vlerësimet',fFaq:'FAQ',acJunior:'Dhoma Junior',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Rezervo',privacyPolicy:'Politika e Privatësisë'},
+it:{heroLabel:'FAQ',ctaLabel:'Prenotazioni',heroH1:'Domande<br>&amp; Risposte.',sideH3:'Hai ancora domande?',sideWa:'WhatsApp',sideL1:'→ Fai una prenotazione',sideL2:'→ Vedi le camere',sideL3:'→ Come arrivare',sideL4:'→ Recensioni degli ospiti',ctaReserve:'Prenota una Camera →',ctaWa:'Chiedi su WhatsApp',mmHome:'Home',mmAbout:'Chi Siamo',mmRooms:'Camere',mmLocation:'Posizione',mmReviews:'Recensioni',mmReserve:'Prenota →',footerNav:'Naviga',footerAccom:'Alloggio',footerFollow:'Seguici',fHome:'Home',fAbout:'Chi Siamo',fRooms:'Camere',fReviews:'Recensioni',fFaq:'FAQ',acJunior:'Junior Room',acPremium:'Premium Triple',acDeluxe:'Deluxe Triple',acSuite:'Book a Room',acReserve:'Prenota',privacyPolicy:'Informativa Privacy'}
+};
+let lang=localStorage.getItem('lang')||'en';
+function applyTranslations(){
+  const t=T[lang];if(!t)return;
+  const q=s=>document.querySelector(s);
+  const qa=s=>[...document.querySelectorAll(s)];
+  const sls=qa('.section-label');
+  if(sls[0])sls[0].textContent=t.heroLabel;if(sls[1])sls[1].textContent=t.ctaLabel;
+  const h1=q('.faq-hero h1');if(h1)h1.innerHTML=t.heroH1;
+  const sh3=q('.faq-sidebar h3');if(sh3)sh3.textContent=t.sideH3;
+  const sideLinks=qa('.faq-sidebar-links a');
+  if(sideLinks[0])sideLinks[0].textContent=t.sideL1;if(sideLinks[1])sideLinks[1].textContent=t.sideL2;if(sideLinks[2])sideLinks[2].textContent=t.sideL3;if(sideLinks[3])sideLinks[3].textContent=t.sideL4;
+  const sideWaBtn=q('.faq-sidebar .btn-whatsapp');if(sideWaBtn){[...sideWaBtn.childNodes].forEach(n=>{if(n.nodeType===3&&n.textContent.trim())n.textContent=' '+t.sideWa;});}
+  const ctaBtns=qa('.cta-strip-btns a');if(ctaBtns[0])ctaBtns[0].textContent=t.ctaReserve;if(ctaBtns[1]){[...ctaBtns[1].childNodes].forEach(n=>{if(n.nodeType===3&&n.textContent.trim())n.textContent=' '+t.ctaWa;});}
+  const mm=s=>q('.mobile-menu a[href="'+s+'"]');
+  if(mm('index.html'))mm('index.html').textContent=t.mmHome;if(mm('about.html'))mm('about.html').textContent=t.mmAbout;if(mm('deluxe-double.html'))mm('deluxe-double.html').textContent=t.mmRooms;if(mm('location.html'))mm('location.html').textContent=t.mmLocation;if(mm('reviews.html'))mm('reviews.html').textContent=t.mmReviews;if(mm('booking.html'))mm('booking.html').textContent=t.mmReserve;
+  const fcts=qa('.footer-col-title');if(fcts[0])fcts[0].textContent=t.footerNav;if(fcts[1])fcts[1].textContent=t.footerAccom;if(fcts[2])fcts[2].textContent=t.footerFollow;
+  const fc=qa('.footer-grid > div');
+  if(fc[1]){const lks=[...fc[1].querySelectorAll('a')];if(lks[0])lks[0].textContent=t.fHome;if(lks[1])lks[1].textContent=t.fAbout;if(lks[2])lks[2].textContent=t.fRooms;if(lks[3])lks[3].textContent=t.fReviews;if(lks[4])lks[4].textContent=t.fFaq;}
+  if(fc[2]){const lks=[...fc[2].querySelectorAll('a')];if(lks[0])lks[0].textContent=t.acJunior;if(lks[1])lks[1].textContent=t.acPremium;if(lks[2])lks[2].textContent=t.acDeluxe;if(lks[3])lks[3].textContent=t.acSuite;if(lks[4])lks[4].textContent=t.acReserve;}
+  if(fc[3]){const lks=[...fc[3].querySelectorAll('a')];if(lks[2])lks[2].textContent=t.privacyPolicy;}
+}
+function setLang(l){lang=l;localStorage.setItem('lang',l);document.querySelectorAll('.lang-btn').forEach(b=>{const m={en:'ENG',sq:'ALB',it:'ITA'};b.classList.toggle('active',b.textContent.trim()===m[l]);});applyTranslations();}
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>80),{passive:true});
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.addEventListener('DOMContentLoaded',()=>setLang(lang));
+</script>
+</body>
+</html>
+

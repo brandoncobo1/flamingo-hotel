@@ -20,7 +20,7 @@
     <link rel="dns-prefetch" href="https://cf.bstatic.com">
     <link rel="dns-prefetch" href="https://panel.bookersdesk.com">
     <link rel="preload" as="image"
-          href="images/r3-hero.jpg"
+          href="images/hero-desktop.jpg"
           imagesrcset="images/r3-hero.jpg 768w,
                        images/hero-desktop.jpg 1440w,
                        images/hero-desktop.jpg 2160w"
@@ -84,7 +84,7 @@
             from { opacity:0; filter:blur(14px); transform:translateY(20px); }
             to   { opacity:1; filter:blur(0);    transform:translateY(0); }
         }
-        @keyframes lineGrow { from { width:0; } to { width:56px; } }
+        @keyframes lineGrow { from { transform:scaleX(0); } to { transform:scaleX(1); } }
         @keyframes scrollPulse {
             0%,100% { opacity:0.2; transform:translateY(0); }
             50%     { opacity:0.75; transform:translateY(10px); }
@@ -273,14 +273,14 @@
             margin-bottom:20px; font-style:italic; font-weight:400;
             opacity:0; animation:fadeUp 0.9s var(--ease-out) forwards 1.4s;
         }
-        .blur-word { display:inline-block; opacity:0; animation:wordIn 0.65s var(--ease-out) forwards; }
+        .blur-word { will-change:transform, opacity, filter; display:inline-block; opacity:0; animation:wordIn 0.65s var(--ease-out) forwards; }
         .hero-title {
             font-family:var(--font-d); font-size:clamp(44px, 6.6vw, 96px);
             font-weight:400; color:var(--white); line-height:1.0; margin-bottom:32px;
         }
         @media(max-width:767px){ .hero-title{ font-size:clamp(38px,9.5vw,64px); } }
 
-        .hero-divider {
+        .hero-divider { transform-origin:left center; will-change:transform;
             width:0; height:1px; background:var(--gold2); margin-bottom:28px;
             animation:lineGrow 0.8s var(--ease-out) forwards 2.9s;
         }
@@ -317,7 +317,7 @@
         .ticker-track { display:flex; white-space:nowrap; animation:ticker 34s linear infinite; }
         .ticker-item {
             font-size:9px; letter-spacing:0.3em; text-transform:uppercase;
-            color:rgba(242,244,248,0.6); padding-right:56px; flex-shrink:0;
+            color:rgba(242,244,248,0.90); padding-right:56px; flex-shrink:0;
         }
         .ticker-dot { color:var(--gold2); margin-right:56px; font-size:13px; line-height:1; flex-shrink:0; }
 
@@ -531,7 +531,7 @@
         @media(prefers-reduced-motion:reduce){
             .reveal,.reveal-left,.reveal-right { transition:opacity 0.3s; transform:none !important; }
             .hero-bg { transform:none !important; }
-            .blur-word { animation:fadeUp 0.4s ease forwards; }
+            .blur-word { will-change:transform, opacity, filter; animation:fadeUp 0.4s ease forwards; }
             .ticker-track { animation:none; }
         }
 

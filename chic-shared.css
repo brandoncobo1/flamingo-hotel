@@ -224,7 +224,7 @@ nav.always-scrolled .nav-logo-img { height:40px; }
 /* â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 footer {
   background:var(--dark2);
-  color:rgba(240,234,224,0.32);
+  color:rgba(240,234,224,0.78);
   padding:72px 0 32px;
 }
 .footer-inner {
@@ -246,12 +246,12 @@ footer {
   color:var(--gold); display:block; margin-bottom:18px; font-weight:500;
 }
 footer p, footer li { font-size:12px; line-height:2.2; }
-footer a { color:rgba(240,234,224,0.44); transition:color 0.2s; }
+footer a { color:rgba(240,234,224,0.78); transition:color 0.2s; }
 footer a:hover { color:var(--gold2); }
 .footer-bottom {
   padding-top:28px; text-align:center;
   font-size:10px; letter-spacing:0.1em;
-  color:rgba(240,234,224,0.18);
+  color:rgba(240,234,224,0.65);
 }
 
 /* â”€â”€ CTA STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
